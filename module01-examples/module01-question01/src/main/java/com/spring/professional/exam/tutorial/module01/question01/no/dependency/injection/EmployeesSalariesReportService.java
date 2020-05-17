@@ -5,6 +5,7 @@ import com.spring.professional.exam.tutorial.module01.question01.commons.dao.Emp
 import com.spring.professional.exam.tutorial.module01.question01.commons.ds.Employee;
 import com.spring.professional.exam.tutorial.module01.question01.commons.ds.EmployeeSalary;
 import com.spring.professional.exam.tutorial.module01.question01.commons.report.PdfSalaryReport;
+import com.spring.professional.exam.tutorial.module01.question01.commons.report.XlsSalaryReport;
 
 import java.util.List;
 
@@ -18,5 +19,8 @@ class EmployeesSalariesReportService {
 
         PdfSalaryReport pdfSalaryReport = new PdfSalaryReport();
         pdfSalaryReport.writeReport(employeeSalaries);
+
+//        XlsSalaryReport xlsSalaryReportSalaryReport = new XlsSalaryReport();
+//        xlsSalaryReportSalaryReport.writeReport(employeeSalaries);
     }
 }
