@@ -2,3 +2,5 @@ git tag v1
 git push --tags
 git tag --delete v1
 git push origin -d v1
+====
+View > Apperance Status bar to enable Git operation from intelliJ
