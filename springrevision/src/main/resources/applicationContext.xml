@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="speakerRepository" class="com.nav.spring.repository.HibernateSpeakerRepositoryImpl"/>
+    <!--    Setter Injection -->
+    <!--    <bean name="speakerService" class="com.nav.spring.service.SpeakerServiceImpl">-->
+    <!--        <property name="speakerRepository" ref="speakerRepository"/>-->
+    <!--    </bean>-->
+
+    <!--    cTor injection is index based -->
+    <!--    <bean name="speakerService" class="com.nav.spring.service.SpeakerServiceImpl">-->
+    <!--        <constructor-arg index="0" ref="speakerRepository"/>-->
+    <!--    </bean>-->
+    <!-- auto-wire -->
+    <!-- In Java you would just put autowire in front of method or ctor -->
+<!--    <bean name="speakerService" class="com.nav.spring.service.SpeakerServiceImpl" autowire="constructor">-->
+<!--        &lt;!&ndash;        <constructor-arg index="0" ref="speakerRepository"/>&ndash;&gt;-->
+<!--    </bean>-->
+    <!-- By type doesn't care for name as long as it finds ctor or setter injecting the class.
+     By name needs the instance variable of method named to match the bean name-->
+    <bean name="speakerService" class="com.nav.spring.service.SpeakerServiceImpl" autowire="byName">
+    </bean>
+
+
+</beans>

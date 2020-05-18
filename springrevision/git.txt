@@ -1,4 +1,14 @@
 git tag v1
 git push --tags
 git tag --delete v1
-git push origin -d v1
+====
+View > Apperance Status bar to enable Git operation from intelliJ
+====
+git tag new old
+git tag -d old
+git push origin :refs/tags/old
+git push --tags
+===
+git checkout -b newbranch v1.0
+===
+git log --graph --oneline --all --decorate
