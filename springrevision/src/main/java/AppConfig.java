@@ -2,15 +2,30 @@ import com.nav.spring.repository.HibernateSpeakerRepositoryImpl;
 import com.nav.spring.repository.SpeakerRepository;
 import com.nav.spring.service.SpeakerService;
 import com.nav.spring.service.SpeakerServiceImpl;
+import com.nav.spring.util.CalendarFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+import java.util.Calendar;
+
 @Configuration
 @ComponentScan({"com.nav.spring"})
 public class AppConfig {
+
+    @Bean(name="cal")
+    public CalendarFactory calFactory() {
+        CalendarFactory factory = new CalendarFactory();
+        factory.setAppmt(2);
+        return factory;
+    }
+
+    @Bean
+    public Calendar cal() throws Exception {
+        return calFactory().getObject();
+    }
 
 
 //  Example of setter injection

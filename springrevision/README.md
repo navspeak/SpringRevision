@@ -21,3 +21,9 @@ Valid only in web-aware spring project
   - Also @Controller
 -- @Bean applicable only at method level not class level (at class level only sterotype annotation is applicable)
  - https://stackoverflow.com/questions/10604298/spring-component-versus-bean  
+*************
+[Bean Life Cycle](src/main/resources/BeanLifeCycle.png)
+- @PostConstruct and @PreDestroy => Bean Aware scopes
+- FactoryBean: https://www.baeldung.com/spring-factorybean
+- SpeL
+- @Service etc followed by @profile("dev") and then run with VM args -Dspring.active.profile="dev"

@@ -6,6 +6,8 @@ import com.nav.spring.repository.SpeakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.List;
 
 @Service("speakerService")
@@ -23,6 +25,16 @@ public class SpeakerServiceImpl implements SpeakerService {
     public SpeakerServiceImpl(SpeakerRepository speakerRepository) {
         System.out.println("SpeakerServiceImpl Repository ctor");
         this.speakerRepository = speakerRepository;
+    }
+
+    @PostConstruct
+    public void initialize(){
+        System.out.println("Called after ctors");
+    }
+
+    @PreDestroy
+    public void destory(){
+        System.out.println("Destroy");
     }
 
     // for setter injection
