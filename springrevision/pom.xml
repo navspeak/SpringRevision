@@ -11,7 +11,7 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <spring-context.version>5.2.6.RELEASE</spring-context.version>
         <lombok.version>1.18.8</lombok.version>
-        <guava.version>23.5-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
     </properties>
 
